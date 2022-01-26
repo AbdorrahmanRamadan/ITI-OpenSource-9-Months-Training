@@ -1,0 +1,19 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jan 17, 2022, 1:08:44 PM
+    Author     : AR
+*/
+
+#background {
+  -fx-background-color: linear-gradient( #000000 ,#ffffff,  #000000);
+}
+#text {
+  -fx-font: 60px Georgia;
+  -fx-fill: #ff0000;
+}
+
+
+

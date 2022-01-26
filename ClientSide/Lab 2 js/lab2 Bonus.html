@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab2 Bonus</title>
+    <script>
+        var area = 0;
+
+        function getCircleArea() {
+            var r = Number(prompt("Enter radius"));
+            area = r * r * 3.14;
+        };
+
+        function getTriangleArea() {
+            var b = Number(prompt("Enter base"));
+            var h = Number(prompt("Enter height"));
+            area = 0.5 * b * h;
+        };
+
+        function getSquareArea() {
+            var a = Number(prompt("Enter length of side"));
+            area = a * a;
+        };
+
+        function getRectangleArea() {
+            var l = Number(prompt("Enter length"));
+            var w = Number(prompt("Enter width"));
+            area = l * w;
+        };
+
+        function getParallelogramArea() {
+            var b = Number(prompt("Enter base"));
+            var h = Number(prompt("Enter vertical height"));
+            area = b * h;
+        };
+
+        function getTrapeziumArea() {
+            var a = Number(prompt("Enter the length of the first of two parallel sides"));
+            var b = Number(prompt("Enter the length of the second of two parallel sides"));
+            var h = Number(prompt("Enter height"));
+            area = 0.5 * (a + b) * h;
+        };
+
+        function getEllipseArea() {
+            var a = Number(prompt("Enter a : a = ½ minor axis"));
+            var b = Number(prompt("Enter b : b = ½ major axis"));
+            area = 3.14 * a * b;
+        };
+
+        function runProgram() {
+            var stop = false;
+            do {
+                var op = prompt("what shape do you want to get area for (circle,triangle,square,rectangle,parallelogram,trapezium,ellipse,exit)");
+                switch (op) {
+                    case "circle":
+                        getCircleArea();
+                        break;
+                    case "triangle":
+                        getTriangleArea();
+                        break;
+                    case "square":
+                        getSquareArea();
+                        break;
+                    case "rectangle":
+                        getRectangleArea();
+                        break;
+                    case "parallelogram":
+                        getParallelogramArea();
+                        break;
+                    case "trapezium":
+                        getTrapeziumArea();
+                        break;
+                    case "ellipse":
+                        getEllipseArea();
+                        break;
+                    case "exit":
+                        stop = true;
+                        break;
+                }
+                if (!stop) {
+                    alert("Area will equal " + area);
+                }
+            } while (!stop)
+        }
+        runProgram();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

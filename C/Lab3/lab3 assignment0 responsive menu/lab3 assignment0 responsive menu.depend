@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1636452523 source:d:\c\lab2\lab3 assignment0 responsive menu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<conio.h>
+

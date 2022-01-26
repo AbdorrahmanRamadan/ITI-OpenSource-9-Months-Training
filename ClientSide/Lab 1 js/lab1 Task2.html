@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1 Task2</title>
+    <script>
+		var flag = true;
+		var fNumber = Number(prompt("Enter first number"));
+		var result = fNumber;
+		do{
+			var operation  = prompt("Select operation \nsum,multi,subtract,division,moduls,exit");
+			var sNumber = Number(prompt("Enter second number"));
+			switch (operation){
+				case "sum":
+					result += sNumber;
+				break;
+				case "multi":
+					result *= sNumber;
+				break;
+				case "subtract":
+					result -= sNumber;
+				break;
+				case "division":
+					result /= sNumber;
+				break;
+				case "moduls":
+					result %= sNumber;
+				break;
+				case "exit":
+					flag = false;
+				break;
+				default:
+					alert("error, please try again");
+				break;
+			}
+			alert("result = "+result);
+		}while(flag)
+    </script>
+</head>
+<body >
+    
+</body>
+</html>
+
+
+
+
+
+
+
+

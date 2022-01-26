@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1637587018 source:d:\c\lab6\lab6 assignment0 line editor\main.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<conio.h>
+

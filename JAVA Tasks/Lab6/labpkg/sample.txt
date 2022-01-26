@@ -1,0 +1,4 @@
+Hello
+that's me Abdorrahman Talking from a file
+
+this is a text added from WriteToFile 

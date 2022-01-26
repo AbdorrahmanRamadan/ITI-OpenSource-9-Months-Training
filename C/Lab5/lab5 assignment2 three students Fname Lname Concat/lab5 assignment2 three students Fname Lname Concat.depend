@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1637049604 source:d:\c\lab5\lab5 assignment2 three students fname lname concat\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+

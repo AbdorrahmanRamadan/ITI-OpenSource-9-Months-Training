@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1635953268 source:d:\c\lab2\lab2 assignment0 get min and max of 5 numbers\main.c
+	<stdio.h>
+	<stdlib.h>
+
