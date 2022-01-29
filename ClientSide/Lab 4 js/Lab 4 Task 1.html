@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 215px;
+            margin: 120px auto;
+            padding: 15px;
+            border: 2px grey solid;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        #userName {
+            width: 380px;
+            padding: 10px 5px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        #password {
+            width: 380px;
+            padding: 10px 5px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .button {
+            width: 360px;
+            background-color: #04AA6D;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px auto;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .button:active {
+            opacity: 0.8;
+            color: black;
+        }
+        
+        #validator-text {
+            color: red;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="userName" placeholder="Enter Username" name="uname" required>
+        <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit" class="button" onclick="validate()">Login</button>
+        <div id="validator-text">&nbsp;</div>
+    </div>
+
+    <script>
+        function validate() {
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            var validatorText = document.getElementById("validator-text");
+            if (userName == "" && password == "") {
+                validatorText.innerText = "username and password fields cannot be empty";
+            } else if (userName == "") {
+                validatorText.innerText = "username field cannot be empty";
+            } else if (password == "") {
+                validatorText.innerText = "password field cannot be empty";
+            } else if (userName == "admin" && password == "123") {
+                validatorText.style.color = "green";
+                validatorText.innerText = "login success";
+            }
+        }
+    </script>
+</body>
+
+</html>

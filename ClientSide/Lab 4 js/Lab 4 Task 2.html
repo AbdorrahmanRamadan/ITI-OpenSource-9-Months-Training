@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            margin-bottom: 5px;
+            list-style-type: none;
+            background: #eee;
+            font-size: 18px;
+            transition: 0.2s;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        ul li.checked {
+            background: linear-gradient(to right,green 91%, #eee 91%);
+            color: #fff;
+        }
+        
+        .Delete {
+            position: absolute;
+            right: 0;
+            top:2px;
+            padding: 12px 16px 12px 16px;
+            height: 40px;
+            line-height: 20px;
+            border-radius: 4px;
+            background-color: red;
+            color: white;
+        }
+        .Done {
+            position: absolute;
+            right: 80px;
+            top:2px;
+            padding: 12px 16px 12px 16px;
+            height: 40px;
+            line-height: 20px;
+            border-radius: 4px;
+            background-color: green;
+            color: white;
+        }
+        .header {
+            position: fixed;
+            bottom:10px;
+            color: white;
+        }
+        
+        #myInput {
+            border: 1px solid black;
+            border-radius: 10px 0px 0px 10px;
+            width:700px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .addBtn {
+            padding: 12.5px;
+            width: 300px;
+            border-radius: 0px 10px 10px 0px;
+            background: #d9d9d9;
+            color: #555;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="myUL">
+    </ul>
+    <div id="myDIV" class="header">
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    
+
+    <script>
+        var myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+            var spande = document.createElement("SPAN");
+            var txtde = document.createTextNode("delete");
+            var spando = document.createElement("SPAN");
+            var txtdo = document.createTextNode("done");
+            spande.className = "Delete";
+            spando.className = "Done";
+            spande.appendChild(txtde);
+            spando.appendChild(txtdo);
+            myNodelist[i].appendChild(spande);
+            myNodelist[i].appendChild(spando);
+        }
+
+        var Delete = document.getElementsByClassName("Delete");
+        var i;
+        for (i = 0; i < Delete.length; i++) {
+            Delete[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+        var Done = document.getElementsByClassName("Done");
+        var i;
+        for (i = 0; i < Done.length; i++) {
+            Done[i].onclick = function() {
+                var div = this.parentElement;
+                div.classList.toggle("checked");
+            }
+        }
+
+        function newElement() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue !== '') {
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myInput").value = "";
+
+            var spande = document.createElement("SPAN");
+            var txtde = document.createTextNode("delete");
+            var spando = document.createElement("SPAN");
+            var txtdo = document.createTextNode("done");
+            spande.className = "Delete";
+            spando.className = "Done";
+            spande.appendChild(txtde);
+            spando.appendChild(txtdo);
+            myNodelist[i].appendChild(spande);
+            myNodelist[i].appendChild(spando);
+
+            for (i = 0; i < Delete.length; i++) {
+                Delete[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.remove();
+                }
+            }
+            for (i = 0; i < Done.length; i++) {
+                Done[i].onclick = function() {
+                if(this.innerHTML==="done")
+                    this.innerHTML="undone";
+                else
+                    this.innerHTML="done";
+                    
+                var div = this.parentElement;
+                div.classList.toggle("checked");
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
