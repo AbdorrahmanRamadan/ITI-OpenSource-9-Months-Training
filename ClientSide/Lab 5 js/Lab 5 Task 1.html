@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 task 1</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 215px;
+            margin: 120px auto;
+            padding: 15px;
+            border: 2px grey solid;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        #userName {
+            width: 380px;
+            padding: 10px 5px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        #password {
+            width: 380px;
+            padding: 10px 5px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .button {
+            width: 360px;
+            background-color: #04AA6D;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px auto;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .button:active {
+            opacity: 0.8;
+            color: black;
+        }
+        
+        #validator-text {
+            color: red;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm">
+            <input type="text" id="userName" placeholder="Enter Username" name="uname" required>
+            <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="button" onclick="validate(event)">Login</button>
+            <div id="validator-text">&nbsp;</div>
+        </form>
+    </div>
+
+    <script>
+        function validate(e) {
+            e.preventDefault();
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            var userNameRegEx = /^[A-Za-z][A-Za-z0-9_]{7,29}$/;
+            var passwordRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            var validatorText = document.getElementById("validator-text");
+            if (userName == "" || password == "") {
+                validatorText.innerText = "username and password fields cannot be empty";
+            } else if (!userNameRegEx.test(userName)) {
+                validatorText.innerText = "username must be from 7 to 14 letters beginning with a letter";
+            } else if (!passwordRegEx.test(password)) {
+                validatorText.innerText = "password shoud be at least 8 charachters containing UC LC and symbols";
+            } else if (userNameRegEx.test(userName) && passwordRegEx.test(password)) {
+                validatorText.innerText = "login success";
+                document.getElementById("myForm").submit();
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 task 1</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        #clock {
+            font-size: 4em;
+            color: rgb(0, 0, 0);
+        }
+        
+        #setstop {
+            cursor: pointer;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 8px;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="clock"></h1>
+    <select id="hours"></select>
+    <select id="minutes"></select>
+    <select id="seconds"></select>
+    <select id="ampm">
+        <option value="AM">AM</option>
+        <option value="PM" selected>PM</option>
+    </select>
+    <button id="setStop">Set Alarm</button>
+
+    <script>
+        var clock = document.getElementById('clock'),
+            hours = document.getElementById('hours'),
+            minutes = document.getElementById('minutes'),
+            seconds = document.getElementById('seconds'),
+            ampm = document.getElementById('ampm'),
+            setStop = document.getElementById('setStop'),
+            time, alarm, activeAlarm = false,
+            alarmSound = new Audio("https://freesound.org/data/previews/219/219244_4082826-lq.mp3");
+
+        alarmSound.loop = true;
+
+        function displayTime() {
+            var now = new Date();
+            time = now.toLocaleTimeString();
+            clock.textContent = time;
+            if (activeAlarm) {
+                if (time == alarm) {
+                    alarmSound.play();
+                }
+            }
+            setTimeout(displayTime, 1);
+        }
+        displayTime();
+
+        function initializeOptionsLists() {
+            for (i = 0; i <= 59; i++) {
+                minutes.options[minutes.options.length] = new Option(i, i);
+                seconds.options[seconds.options.length] = new Option(i, i);
+            }
+            for (i = 1; i <= 12; i++) {
+                hours.options[hours.options.length] = new Option(i, i);
+            }
+        }
+        initializeOptionsLists();
+
+        setStop.onclick = function() {
+            if (!activeAlarm) {
+                hours.disabled = true;
+                minutes.disabled = true;
+                seconds.disabled = true;
+                ampm.disabled = true;
+
+                alarm = hours.value + ":" + minutes.value + ":" + seconds.value + " " + ampm.value;
+                this.innerHTML = "Stop Alarm";
+                activeAlarm = true;
+            } else {
+                hours.disabled = false;
+                minutes.disabled = false;
+                seconds.disabled = false;
+                ampm.disabled = false;
+                alarmSound.pause();
+                alarm = "00:00:00 AM";
+                this.innerHTML = "Set Alarm";
+                activeAlarm = false;
+            }
+        };
+    </script>
+</body>
+
+</html>
