@@ -1,0 +1,29 @@
+1-Validate an email,print 1 if email is valid, 0 if not valid
+"AbdorrahmanRamadan@gmail.com" | grep -c "^\w\{1,\}[@][a-z]*[.][a-z]\{2,\}$"
+
+2-Validate a floating point number (negative and poisitive)
+echo "-12.5" | grep -c "^-\{0,1\}[0-9][.][0-9]$"
+
+3-Backup your home directory in compressed archive in a directory /backup every day The archive name must be home-backup-<day>-<year>.tar.gz
+touch backup.sh
+nano backup.sh
+
+tar -zcvpf /media/backup-`date +%d-%Y`.tar.gz /home
+
+chmod +754 backup.sh
+sudo crontab -u $USER -e
+
+0 6 5 8 * /home/USER/backup.sh
+
+4-Save the system load, and memory used in log file (syslog) every min
+
+touch syslog.sh
+nano syslog.sh
+
+(uptime | cut -d, -f3-5) >> syslog.log;
+
+chmod +754 syslog.sh
+sudo crontab -u $USER -e
+
+* * * * * /home/$USER/<filename>.sh
+

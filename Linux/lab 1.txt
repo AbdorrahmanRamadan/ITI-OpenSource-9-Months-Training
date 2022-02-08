@@ -1,0 +1,14 @@
+1-How to use less command
+Less is a command line utility that displays the contents of a file or a command output, one page at a time. 
+It is similar to more, but has more advanced features and allows you to navigate both forward and backward through the file.
+
+When starting less doesn’t read the entire file which results in much faster load times compared to text editors like vim or nano .
+The less command is mostly used for opening large files .
+How to Use Less
+The general syntax for the less program is as follows:
+
+less [OPTIONS] filename
+
+2-The file /etc/passwd contains lines, with separator :, how to print only the 1st,3rd using cut
+cut -d " " -f 1,3 /etc/passwd
+		

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lab 7 task 2</title>
+    </head>
+    <body>
+        <table class="users_data">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script>
+            var usersTable = document.querySelector(".users_data");
+            var usersTableBody = usersTable.getElementsByTagName("tbody")[0];
+            async function requestResponseUsersData(){
+                var users;
+                try{
+                    var request = await fetch("https://reqres.in/api/users?page=2");
+                    var response = await request.json();
+                    users = response.data;
+                   var data =  users.map(function(item){
+                        return `
+                            <tr>
+                                <td>${item.first_name}</td>
+                                <td>${item.last_name}</td>
+                                <td><img src="${item.avatar}"></td>
+                            </tr>
+                        `
+                    })
+                    
+                    var htmlCode = data.join("");
+                    usersTableBody.innerHTML = htmlCode;
+                }
+                catch(e){}
+            }
+            requestResponseUsersData();
+        </script>
+    </body>
+</html>

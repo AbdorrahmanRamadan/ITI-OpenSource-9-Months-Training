@@ -1,0 +1,37 @@
+1-Install chronyd, and configure it for NTP servers
+
+first assignment (done on linux)
+
+sudo apt install chrony
+Chronyc makestep
+
+
+
+
+2-Install Mysql, and create a database called itidb with one table
+		employeeTBL
+			id int (p)
+			name char 60
+			email char 60
+
+
+
+second assignment (done on WSL)
+sudo apt-get update
+sudo apt-get install mysql-server
+mysql --version
+
+sudo service mysql start
+
+mysql -u root
+create database itidb ;
+use itidb;
+create table employeeTBL(
+   ID INT NOT NULL AUTO_INCREMENT,
+   Name VARCHAR(60) NOT NULL,
+   Email  VARCHAR(60) ,
+     PRIMARY KEY (ID)
+);
+describe employeeTBL
+
+
