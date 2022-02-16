@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>ES6 lab 1</title>
+    <meta name="author" content="AR">
+</head>
+<body>
+	<div id="divToShowConsoleLog"></div>
+    <script>
+        const PI = 3.14;
+        class Shape {
+            X = 0;
+            Y = 0;
+            constructor(X, Y) {
+                this.X = X;
+                this.Y = Y;
+            }
+            getCircumference() {}
+            getArea() {}
+            log() {
+                console.log(`Circumference: ${this.getCircumference()},Area: ${this.getArea()}, Type: ${this.constructor.name}`)
+				divToShowConsoleLog.innerHTML +=`<p>Circumference: ${this.getCircumference()},Area: ${this.getArea()}, Type: ${this.constructor.name}</p>`
+            }
+        }
+        class Rectangle extends Shape {
+            Width = 0;
+            Height = 0;
+            constructor(X, Y, Width, Height) {
+                if (arguments.length == 1 && typeof arguments[0] == 'object') {
+                    super(arguments[0].X, arguments[0].Y);
+                    this.Width = arguments[0].Width;
+                    this.Height = arguments[0].Height;
+                } else {
+                    super(X, Y);
+                    this.Width = Width;
+                    this.Height = Height;
+                }
+            }
+            getCircumference() {
+                return (this.Width + this.Height) * 2;
+            }
+            getArea() {
+                return this.Width * this.Height;
+            }
+        }
+        class Square extends Rectangle {
+            Length = 0;
+            constructor(X, Y, Length) {
+                if (arguments.length == 1 && typeof arguments[0] == 'object') {
+                    super(arguments[0].X, arguments[0].Y, arguments[0].Length, arguments[0].Length);
+                    this.Length = arguments[0].Length;
+                } else {
+                    super(X, Y, Length, Length);
+                    this.Length = Length;
+                }
+
+            }
+        }
+        class Oval extends Shape {
+            A = 0;
+            B = 0;
+            constructor(X, Y, A, B) {
+                if (arguments.length == 1 && typeof arguments[0] == 'object') {
+                    super(arguments[0].X, arguments[0].Y);
+                    this.A = arguments[0].A;
+                    this.B = arguments[0].B;
+                } else {
+                    super(X, Y);
+                    this.A = A;
+                    this.B = B;
+                }
+
+            }
+            getCircumference() {
+                return (this.A + this.B) * PI;
+            }
+            getArea() {
+                return this.A * this.B * PI;
+            }
+
+        }
+        class Circle extends Oval {
+            R = 0;
+            constructor(X, Y, R) {
+                if (arguments.length == 1 && typeof arguments[0] == 'object') {
+                    super(arguments[0].X, arguments[0].Y, arguments[0].R, arguments[0].R);
+                    this.R = arguments[0].R;
+                } else {
+                    super(X, Y, R, R);
+                    this.R = R;
+                }
+            }
+        }
+        class DrawShapes {
+            shapes = [];
+            addShape(shape) {
+                this.shapes.push(shape);
+            }
+            log() {
+                for (let i = 0; i < this.shapes.length; i++) {
+                    this.shapes[i].log();
+                }
+
+            }
+        }
+        let X = 0, Y = 0, Width = 10, Height = 5, Length = 5, A = 10, B = 5, R = 5;
+        let rectangleWithParameters = new Rectangle(X, Y, Width, Height);
+        let rectangleWithObject = new Rectangle(rectangleWithParameters);
+        let squareWithParameters = new Square(X, Y, Length);
+        let squareWithObject = new Square(squareWithParameters);
+        let ovalWithParameters = new Oval(X, Y, A, B);
+        let ovalWithObject = new Oval(ovalWithParameters);
+        let circleWithParameters = new Circle(X, Y, R);
+        let circleWithObject = new Circle(circleWithParameters);
+        let drawShapes = new DrawShapes();
+        drawShapes.addShape(rectangleWithObject);
+        drawShapes.addShape(squareWithObject);
+        drawShapes.addShape(ovalWithObject);
+        drawShapes.addShape(circleWithParameters);
+        drawShapes.log();
+    </script>
+</body>
+
+</html>
