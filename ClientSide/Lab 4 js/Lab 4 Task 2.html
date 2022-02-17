@@ -26,7 +26,7 @@
         }
         
         ul li.checked {
-            background: linear-gradient(to right,green 91%, #eee 91%);
+            background: lightgreen;
             color: #fff;
         }
         
@@ -139,8 +139,8 @@
             spando.className = "Done";
             spande.appendChild(txtde);
             spando.appendChild(txtdo);
-            myNodelist[i].appendChild(spande);
-            myNodelist[i].appendChild(spando);
+            li.appendChild(spande);
+            li.appendChild(spando);
 
             for (i = 0; i < Delete.length; i++) {
                 Delete[i].onclick = function() {
