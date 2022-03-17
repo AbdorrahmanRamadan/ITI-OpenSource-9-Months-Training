@@ -1,0 +1,16 @@
+Employees
+{
+    width: 100%;
+    text-align: center;
+}
+Employee
+{
+    display: block;
+    margin-bottom: 30pt;
+}
+Employee *
+{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}

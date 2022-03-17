@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Employees" type="EmployeesType"/>
+  <xs:complexType name="phoneType">
+    <xs:simpleContent>
+      <xs:extension base="xs:integer">
+        <xs:attribute type="xs:string" name="type" use="optional">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="mobile"/>
+              <xs:enumeration value="work"/>
+              <xs:enumeration value="home"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="phonesType">
+    <xs:sequence>
+      <xs:element type="phoneType" name="phone" minOccurs="1" maxOccurs="3">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adressType">
+    <xs:sequence>
+      <xs:element type="xs:integer" name="street"/>
+      <xs:element type="xs:integer" name="buildingNumber"/>
+      <xs:element type="xs:string" name="region"/>
+      <xs:element type="xs:string" name="city"/>
+      <xs:element type="xs:string" name="country"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adressesType">
+    <xs:sequence>
+      <xs:element type="adressType" name="adress" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EmployeeType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Abdo"/>
+            <xs:enumeration value="Ahmed"/>
+            <xs:enumeration value="Ali"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="phonesType" name="phones"/>
+      <xs:element type="adressesType" name="adresses"/>
+      <xs:element type="xs:string" name="email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EmployeesType">
+    <xs:sequence>
+      <xs:element type="EmployeeType" name="Employee" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

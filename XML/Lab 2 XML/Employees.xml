@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="Employees.css"?>
+<!DOCTYPE Employees SYSTEM "Employees.dtd">
+<Employees xmlns:xsd = "http://www.w3.org/2001/XMLSchema-instance"  xsd:noNamespaceSchemaLocation ="Employees.xsd">
+	<Employee>
+		<name>Abdo</name>
+		<phones>
+			<phone type="mobile">123456789</phone>
+			<phone type="work">123456789</phone>
+			<phone type="home">123456789</phone>
+		</phones>
+		<adresses>
+			<adress>
+				<street>1</street>
+				<buildingNumber>12</buildingNumber>
+				<region>region</region>
+				<city>city name</city>
+				<country>country name</country>
+			</adress>
+			<adress>
+				<street>1</street>
+				<buildingNumber>14</buildingNumber>
+				<region>region</region>
+				<city>city name</city>
+				<country>country name</country>
+			</adress>
+		</adresses>
+		<email>Sample@Sample.com</email>
+	</Employee>
+	<Employee>
+		<name>Ahmed</name>
+		<phones>
+			<phone type="mobile">123456789</phone>
+			<phone type="work">123456789</phone>
+			<phone type="home">123456789</phone>
+		</phones>
+		<adresses>
+			<adress>
+				<street>2</street>
+				<buildingNumber>24</buildingNumber>
+				<region>region</region>
+				<city>city name</city>
+				<country>country name</country>
+			</adress>
+		</adresses>
+		<email>Sample@Sample.com</email>
+	</Employee>
+	<Employee>
+		<name>Ali</name>
+		<phones>
+			<phone type="mobile">123456789</phone>
+			<phone type="work">123456789</phone>
+			<phone type="home">123456789</phone>
+		</phones>
+		<adresses>
+			<adress>
+				<street>2</street>
+				<buildingNumber>2</buildingNumber>
+				<region>region</region>
+				<city>city name</city>
+				<country>country name</country>
+			</adress>
+		</adresses>
+		<email>Sample@Sample.com</email>
+	</Employee>
+</Employees>

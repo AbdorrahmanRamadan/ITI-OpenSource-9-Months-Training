@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="Employees.css"?>
+<Employees>
+	<Employee>
+		<name>Abdo</name>
+		<phones>
+			<phone type="mobile">123456789</phone>
+			<phone type="work">6782367489</phone>
+			<phone type="home">156789</phone>
+		</phones>
+		<adresses>
+			<adress>
+				<street>street no#</street>
+				<buildingNumber>building no#</buildingNumber>
+				<region>region</region>
+				<city>city name</city>
+				<country>country name</country>
+			</adress>
+		</adresses>
+		<email>Sample@Sample.com</email>
+	</Employee>
+	<Employee>
+		<name>Ahmed</name>
+		<phones>
+			<phone type="mobile">123456789</phone>
+			<phone type="work">6782367489</phone>
+			<phone type="home">156789</phone>
+		</phones>
+		<adresses>
+			<adress>
+				<street>street no#</street>
+				<buildingNumber>building no#</buildingNumber>
+				<region>region</region>
+				<city>city name</city>
+				<country>country name</country>
+			</adress>
+		</adresses>
+		<email>Sample@Sample.com</email>
+	</Employee>
+	<Employee>
+		<name>Ali</name>
+		<phones>
+			<phone type="mobile">123456789</phone>
+		</phones>
+		<adresses>
+			<adress>
+				<street>street no#</street>
+				<buildingNumber>building no#</buildingNumber>
+				<region>region</region>
+				<city>city name</city>
+				<country>country name</country>
+			</adress>
+		</adresses>
+		<email>Sample@Sample.com</email>
+	</Employee>
+</Employees>

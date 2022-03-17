@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="Library.css"?>
+<library location="Alexandria" librarian="Abdorrahman" description="Oldest library in Alexandria">
+    <book title="Book1" ISBN="1" preface="preface1">Book1
+        <part title="part 1">Part1
+            <chapters>
+                <chapter title="Chapter1" summary="">Chapter1
+                    <sections>
+                        <section>section1
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                        <section>section2
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                    </sections>
+                </chapter>
+            </chapters>
+        </part>
+        <part title="part 2">Part2
+            <chapters>
+                <chapter title="chapter 2" summary="">Chapter2
+                    <sections>
+                        <section>section1
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                        <section>section2
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                    </sections>
+                </chapter>
+            </chapters>
+        </part>
+    </book>
+    <book title="Book2" ISBN="1" preface="preface1">Book2
+        <part title="part 1">Part1
+            <chapters>
+                <chapter title="Chapter1" summary="">Chapter1
+                    <sections>
+                        <section>section1
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                        <section>section2
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                    </sections>
+                </chapter>
+            </chapters>
+        </part>
+        <part title="part 2">Part2
+            <chapters>
+                <chapter title="chapter 2" summary="">Chapter2
+                    <sections>
+                        <section>section1
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                        <section>section2
+                            <paragraph>paragraph1</paragraph>
+                            <paragraph>paragraph2</paragraph>
+                        </section>
+                    </sections>
+                </chapter>
+            </chapters>
+        </part>
+    </book>
+</library>

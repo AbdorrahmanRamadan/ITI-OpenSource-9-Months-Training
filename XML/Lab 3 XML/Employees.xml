@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Employees.xsl"?>
+<Employees>
+	<Employee>
+		<name>Abdo</name>
+		<phones>
+			<phone type="work">01234478349</phone>
+			<phone type="mobile">0123456789</phone>
+			<phone type="home">4315679</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>12</street>
+				<buildingNumber>4</buildingNumber>
+				<region>Agamy</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+			<address>
+				<street>1</street>
+				<buildingNumber>2</buildingNumber>
+				<region>Raml Station</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>Abdo@gmail.com</email>
+	</Employee>
+	<Employee>
+		<name>Ahmed</name>
+		<phones>
+			<phone type="mobile">01144356789</phone>
+			<phone type="work">01582367489</phone>
+			<phone type="home">4316789</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>55</street>
+				<buildingNumber>5</buildingNumber>
+				<region>Asafra</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+			<address>
+				<street>38</street>
+				<buildingNumber>17</buildingNumber>
+				<region>Smouha</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>Ahmed@gmail.com</email>
+	</Employee>
+	<Employee>
+		<name>Ali</name>
+		<phones>
+			<phone type="home">43526789</phone>
+			<phone type="work">01068237489</phone>
+			<phone type="mobile">01032156789</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>42</street>
+				<buildingNumber>8</buildingNumber>
+				<region>Shatbi</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+			<address>
+				<street>20</street>
+				<buildingNumber>3</buildingNumber>
+				<region>Manshiya</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>Ali@gmail.com</email>
+	</Employee>
+</Employees>

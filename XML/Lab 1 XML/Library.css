@@ -1,0 +1,14 @@
+library{
+    text-align: center
+}
+book
+{
+    display: block;
+    margin-bottom: 30pt;
+}
+book *
+{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
