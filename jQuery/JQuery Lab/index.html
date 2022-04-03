@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reset.css">
+    <title>Drag and Drop List</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  </head>
+
+    <body>
+    <li class="item menu hidden" draggable="true"><span class="title">Share Box</span><span class="price">50</span><span class="currency">EGP</span><img class="image" src="sharebox.jpg"></li>
+      <header>Magdonald's &#128514; Restaurant</header>
+      <div class="container">
+        <div class="lists">
+          <ul>
+            <li class="column">
+            <span class="column-header header-menu">
+              <h2>Menu</h2>
+            </span>
+            <div class="options"></div>
+            <ul class="inner-list menu">
+
+            </ul>
+            </li>
+          </ul>
+          <ul class="list">
+          <li class="column">
+          <span class="column-header header-order">
+            <h2>order</h2>
+          </span>
+          <div class="options"></div>
+
+          <ul class="inner-list order">
+          </ul>
+            <span class="column-header header-order">
+            <h3>price</h3><h3 class="food-total">0</h3>
+          </span>
+            <span class="column-header header-order">
+            <h3>VAT</h3><h3 class="VAT">0</h3>
+          </span>
+            <span class="column-header header-order">
+            <h3>Delivery</h3><h3 class="delivery">0</h3>
+          </span>
+            <span class="column-header header-order discount hidden">
+            <h3>discount</h3><h3 class="discount">-30</h3>
+          </span>
+            <span class="column-header header-order">
+            <h3>total price</h3><h3 class="cart-total">0</h3>
+          </span>
+          </li>
+          </ul>
+        </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+
+</html>

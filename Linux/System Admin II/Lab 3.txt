@@ -1,0 +1,62 @@
+1-Install network manager
+$ sudo apt install network-manager
+$ sudo nano /etc/default/grub
+add-> net.ifnames=0 biosdevname=0 
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+$ sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+$ sudo reboot
+
+2-Configure the scenario
+3-In vm2, install apache2
+4-In vm2 enable access to apache2
+	from vm1
+		curl http://192.168.10.2
+In vm1
+Install network manager: 
+$ sudo apt install network-manager
+$ sudo nano /etc/default/grub
+GRUB_CMDLINE_LINUX="", and inside "net.ifnames=0 biosdevname=0" 
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+$ touch /etc/NetworkManager/conf.d/10-globally-managed-d.conf
+$ sudo reboot
+
+Firewall:
+$ sudo apt install firewalld
+$ sudo systemctl enable --now firewalld
+$ sudo firewall-cmd --add-service=http
+$ sudo firewall-cmd --permanent --add-service=http
+$ sudo firewall-cmd --reload
+$ sudo nmcli con add con-name ExternalIF type ethernet ifname eth0 ip4 192.168.1.200/24 gw4 192.168.1.1
+$ sudo nmcli con mod ExternalIF ipv4.dns 192.168.1.1
+$ sudo nmcli con mod ExternalIF connection.zone external
+$ sudo nmcli con up ExternalIF
+$ sudo nmcli con add con-name InternalIF type ethernet ifname eth1 ip4 192.168.10.1/24 gw4 192.168.10.1
+$ sudo nmcli con up InternalIF
+
+
+In vm2
+Install network manager: 
+$ sudo apt install network-manager
+$ sudo nano /etc/default/grub
+GRUB_CMDLINE_LINUX="", and inside "net.ifnames=0 biosdevname=0" 
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+$ touch /etc/NetworkManager/conf.d/10-globally-managed-d.conf
+$ sudo reboot
+Firewall:
+$ sudo apt install firewalld
+$ sudo systemctl enable --now firewalld
+$ sudo firewall-cmd --add-service=http
+$ sudo firewall-cmd --permanent --add-service=http
+$ sudo firewall-cmd --reload
+$ sudo nmcli con add con-name mylan type ethernet ifname eth0 ip4 192.168.10.2/24 gw4 192.168.10.1
+$ sudo nmcli con mod mylan ipv4.dns 192.168.1.1
+$ sudo nmcli con mod mylan connection.zone external
+$ sudo nmcli con up mylan 
+
+Apache2:
+$ sudo apt update
+$ sudo apt install apache2
+$ sudo systemctl start apache2
+
+$ curl http://192.168.10.2
+

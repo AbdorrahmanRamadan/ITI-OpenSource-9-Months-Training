@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Employees>
+	<Employee>
+		<name>Abdo</name>
+		<phones>
+			<phone type="work">01234478349</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>12</street>
+				<building>4</building>
+				<region>Agamy</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>Abdo@gmail.com</email>
+	</Employee>
+	<Employee>
+		<name>Ahmed</name>
+		<phones>
+			<phone type="mobile">01144356789</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>55</street>
+				<building>5</building>
+				<region>Asafra</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>Ahmed@gmail.com</email>
+	</Employee>
+	<Employee>
+		<name>Ali</name>
+		<phones>
+			<phone type="home">43526789</phone>
+		</phones>
+		<addresses>
+			<address>
+				<street>42</street>
+				<building>8</building>
+				<region>Shatbi</region>
+				<city>Alexandria</city>
+				<country>Egypt</country>
+			</address>
+		</addresses>
+		<email>Ali@gmail.com</email>
+	</Employee>
+</Employees>

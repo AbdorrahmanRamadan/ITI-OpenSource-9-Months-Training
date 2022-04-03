@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Website created by Mads Kjaer - www.madskjaer.dk -->
+
+    <title>The Flower Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        header, footer, section, aside, nav, article
+        {
+            display: block;
+        }
+
+        body
+        {
+            margin: 0 auto;
+            padding: 22px 0;
+            font: 13px/22px Helvetica, Arial, sans-serif;
+            background: #F0F0F0;
+        }
+
+        h1, h2
+        {
+            font-size: 28px;
+            line-height: 44px;
+            padding: 22px 0;
+        }
+
+        h3
+        {
+            font-size: 18px;
+            line-height: 22px;
+            padding: 11px 0;
+        }
+
+        p
+        {
+            padding-bottom: 22px;
+        }
+        nav
+        {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: url("images/nav_background.png");
+        }
+
+        nav ul
+        {
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        nav ul li
+        {
+            float: left;
+        }
+
+        nav ul li a
+        {
+            display: block;
+            margin-right: 20px;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            color: #777;
+        }
+
+        nav ul li a:hover
+        {
+            color: #fff;
+        }
+
+        nav ul li.selected a
+        {
+            color: #fff;
+        }
+
+        nav ul li.subscribe a
+        {
+            text-align: left;
+            padding-left: 23px;
+            background: url("images/rss.png") left center no-repeat;
+        }
+
+
+
+        /*------------------------------INTRODUCTION------------------------------*/
+
+        #intro
+        {
+            position: relative;
+            margin-top: 66px;
+            padding: 44px;
+            background: #467612 url("images/intro_background.png") repeat-x;
+            background-size: 100%;
+            border-radius: 22px;
+            height: 300px;
+        }
+
+        #intro h2, #intro p
+        {
+            position: relative;
+            z-index: 9999;
+            width: 50%;
+        }
+
+        #intro h2
+        {
+            padding: 0 0 22px 0;
+            font-weight: normal;
+            color: #fff;
+        }
+
+        #intro p
+        {
+            padding: 0;
+            color: #d9f499;
+        }
+
+        #intro img
+        {
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            border-radius: 22px;
+        }
+
+
+
+        /*------------------------------CONTENT AREA AND SIDEBAR LAYOUT------------------------------*/
+
+        #content
+        {
+            display: table;
+        }
+
+        #mainContent
+        {
+            display: table-cell;
+            padding-right: 22px;
+        }
+
+        aside
+        {
+            display: table-cell;
+            background: url("images/sidebar_background.png") top left;
+        }
+
+
+
+        /*------------------------------BLOG POST------------------------------*/
+        .blogPost header p, .blogPost header p a
+        {
+            font-size: 14px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .blogPost header p a:hover
+        {
+            text-decoration: none;
+            color: #000;
+        }
+
+
+        .blogPost img
+        {
+            margin: 22px 0;
+            box-shadow: 3px 3px 7px #777;
+        }
+
+
+
+        /*------------------------------COMMENTS------------------------------*/
+
+        #comments
+        {
+            margin-top: 21px;
+            padding-top: 22px;
+            border-top: 1px solid #d7d7d7;
+        }
+
+        #comments article
+        {
+            display: table;
+            padding: 22px;
+        }
+
+        #comments article:nth-child(odd)
+        {
+            padding: 21px;
+            background: #E3E3E3;
+            border: 1px solid #d7d7d7;
+            border-radius: 11px;
+        }
+
+        #comments article header
+        {
+            display: table-cell;
+            padding-right: 22px;
+        }
+
+        #comments article header a
+        {
+            display: block;
+            font-weight: bold;
+            color: #000;
+        }
+
+        #comments article header a:hover
+        {
+            text-decoration: none;
+        }
+
+        #comments article p
+        {
+            padding: 0;
+        }
+
+
+
+        /*------------------------------COMMENT FORM------------------------------*/
+        form
+        {
+            margin-top: 21px;
+            padding-top: 22px;
+            border-top: 1px solid #d7d7d7;
+        }
+
+        form p
+        {
+            display: table;
+            margin-bottom: 22px;
+            padding: 0 22px;
+        }
+
+        form label
+        {
+            display: table-cell;
+            padding-right: 20px;
+            width: 140px;
+            text-align: right;
+            font-weight: bold;
+            vertical-align: top;
+        }
+
+        form input[type="text"]
+        {
+            display: table-cell;
+            width: 300px;
+            height: 20px;
+            height: 20px;
+            border: 1px solid #d7d7d7;
+        }
+
+        form textarea
+        {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #d7d7d7;
+        }
+
+        form input[type="submit"]
+        {
+            margin-left: 162px;
+        }
+
+
+
+        /*------------------------------SIDEBAR------------------------------*/
+        aside section
+        {
+            margin: 22px 0 0 22px;
+            width:200px;
+            padding: 11px 22px;
+            background: url("images/sidebar_section_background.png") repeat-x;
+            border-radius: 11px;
+        }
+
+        aside section ul
+        {
+            margin: 0 0 0 22px;
+            list-style: none;
+        }
+
+        aside section ul li a
+        {
+            display: block;
+            text-decoration: none;
+            color: #000;
+        }
+
+        aside section ul li a:hover
+        {
+            text-decoration: underline;
+        }
+
+
+
+        /*------------------------------FOOTER------------------------------*/
+        footer
+        {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: #222;
+        }
+
+        footer div
+        {
+            display: table;
+            margin: 0 auto;
+            padding: 44px 0;
+            color: #777;
+        }
+
+        footer div section
+        {
+            display: table-cell;
+            width: 300px;
+        }
+
+        footer div #about, footer div #blogroll
+        {
+            padding-right: 20px;
+        }
+
+        footer h3
+        {
+            color: #FFF;
+        }
+
+        footer a
+        {
+            color: #999;
+        }
+
+        footer a:hover
+        {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        footer ul
+        {
+            margin: 0 0 0 40px;
+            list-style: square;
+            color: #565656;
+        }
+
+        footer ul li a
+        {
+            display: block;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container my-4">
+        <div class="header">
+            <h2>The Flower Blog</h2>
+        </div>
+    </div>
+        
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                  <ul class=" col-12">
+                      <li class="selected col-2"><a href="#">Blog</a></li>
+                      <li class="col-2"><a href="#">About</a></li>
+                      <li class="col-2"><a href="#">Archives</a></li>
+                      <li class="col-2"><a href="#">Contact</a></li>
+                      <li class="subscribe col-4"><a href="#">Subscribe</a></li>
+                  </ul>
+            </div>
+          </nav>
+
+        <div class="container offset-1">
+            <section id="intro" class="col-12">
+                <header>
+                    <h2 class="col-12">Do you love flowers as much as we do?</h2>
+                </header>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut.</p>
+                <img src="images/intro_flower.png" alt="Flower" class="img-fluid d-none d-md-inline"/>
+            </section>
+            <div id="mainContent" class="col-md-8 col-sm-12">
+            <div class="aside col-12">
+                <div class="blogPost col-12">
+                    <div class="header col-12">
+                        <h2>
+                            This is the title of a blog post</h2>
+                        <p>
+                            Posted on June 29th 2009 by <a href="#">Mads Kjaer</a> - <a href="#comments">3 comments</a></p>
+                    </div>
+                    <div class="col-12">
+                        <p>
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod tellus eu
+                            orci imperdiet nec rutrum lacus blandit. Cras enim nibh, sodales ultricies elementum
+                            vel, fermentum id tellus. Proin metus odio, ultricies eu pharetra dictum, laoreet
+                            id odio. Curabitur in odio augue. Morbi congue auctor interdum. Phasellus sit amet
+                            metus justo. Phasellus vitae tellus orci, at elementum ipsum. In in quam eget diam
+                            adipiscing condimentum. Maecenas gravida diam vitae nisi convallis vulputate quis
+                            sit amet nibh. Nullam ut velit tortor. Curabitur ut elit id nisl volutpat consectetur
+                            ac ac lorem. Quisque non elit et elit lacinia lobortis nec a velit. Sed ac nisl
+                            sed enim consequat porttitor.</p>
+                        <div class="col-12">
+                            <img src="images/flower.png" alt="Flower" />
+                            <p>This is a beautiful flower</p>
+                        </div>
+                        <p>
+                            Pellentesque ut sapien arcu, egestas mollis massa. Fusce lectus leo, fringilla at
+                            aliquet sit amet, volutpat non erat. Aenean molestie nibh vitae turpis venenatis
+                            vel accumsan nunc tincidunt. Suspendisse id purus vel felis auctor mattis non ac
+                            erat. Pellentesque sodales venenatis condimentum. Aliquam sit amet nibh nisi, ut
+                            pulvinar est. Sed ullamcorper nisi vel tortor volutpat eleifend. Vestibulum iaculis
+                            ullamcorper diam consectetur sagittis. Quisque vitae mauris ut elit semper condimentum
+                            varius nec nisl. Nulla tempus porttitor dolor ac eleifend. Proin vitae purus lectus,
+                            a hendrerit ipsum. Aliquam mattis lacinia risus in blandit.</p>
+                        <p>
+                            Vivamus vitae nulla dolor. Suspendisse eu lacinia justo. Vestibulum a felis ante,
+                            non aliquam leo. Aliquam eleifend, est viverra semper luctus, metus purus commodo
+                            elit, a elementum nisi lectus vel magna. Praesent faucibus leo sit amet arcu vehicula
+                            sed facilisis eros aliquet. Etiam sodales, enim sit amet mollis vestibulum, ipsum
+                            sapien accumsan lectus, eget ultricies arcu velit ut diam. Aenean fermentum luctus
+                            nulla, eu malesuada urna consequat in. Pellentesque habitant morbi tristique senectus
+                            et netus et malesuada fames ac turpis egestas. Pellentesque massa lacus, sodales
+                            id facilisis ac, lobortis sed arcu. Donec hendrerit fringilla ligula, ac rutrum
+                            nulla bibendum id. Cras sapien ligula, tincidunt eget euismod nec, ultricies eu
+                            augue. Nulla vitae velit sollicitudin magna mattis eleifend. Nam enim justo, vulputate
+                            vitae pretium ac, rutrum at turpis. Aenean id magna neque. Sed rhoncus aliquet viverra.</p>
+                    </div>
+                </div>
+            </div>
+                <section id="comments" class="row">
+                    <h3>
+                        Comments</h3>
+                    <article>
+                        <header> 
+                            <a href="#">George Washington</a> on June 29th 2009 at 23:35
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut.</p>
+                    </article>
+                    <article>
+                        <header> 
+                            <a href="#">Benjamin Franklin</a> on June 29th 2009 at 23:40
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut.</p>
+                    </article>
+                    <article>
+                        <header> 
+                            <a href="#">Barack Obama</a> on June 29th 2009 at 23:59
+                        </header>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut.</p>
+                    </article>
+                </section>
+                <form action="#" method="post">
+                <h3>
+                    Post a comment</h3>
+                <p>
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="text" />
+                </p>
+                <p>
+                    <label for="email">
+                        E-mail</label>
+                    <input name="email" id="email" type="text" />
+                </p>
+                <p>
+                    <label for="website">
+                        Website</label>
+                    <input name="website" id="website" type="text" />
+                </p>
+                <p>
+                    <label for="comment">
+                        Comment</label>
+                    <textarea name="comment" id="comment"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Post comment" /></p>
+                </form>
+            </div>
+            <aside class="d-none d-md-table-cell">
+                <section>
+                    <header>
+                        <h3>
+                            Categories</h3>
+                    </header>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Sit amet consectetur</a></li>
+                        <li><a href="#">Adipisicing elit sed</a></li>
+                        <li><a href="#">Do eiusmod tempor</a></li>
+                        <li><a href="#">Incididunt ut labore</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <header>
+                        <h3>
+                            Archives</h3>
+                    </header>
+                    <ul>
+                        <li><a href="#">December 2008</a></li>
+                        <li><a href="#">January 2009</a></li>
+                        <li><a href="#">February 2009</a></li>
+                        <li><a href="#">March 2009</a></li>
+                        <li><a href="#">April 2009</a></li>
+                        <li><a href="#">May 2009</a></li>
+                        <li><a href="#">June 2009</a></li>
+                    </ul>
+                </section>
+            </aside>
+    </div>
+        <footer>
+            <div class="row col-8 offset-2">
+                <section id="about" class="col-md-4 col-sm-12">
+                    <header>
+                        <h3>
+                            About</h3>
+                    </header>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco <a href="#">laboris nisi ut aliquip</a> ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                        qui officia deserunt mollit anim id est laborum.</p>
+                </section>
+                <section id="blogroll" class="col-md-4 col-sm-12">
+                    <header>
+                        <h3>
+                            Blogroll</h3>
+                    </header>
+                    <ul>
+                        <li><a href="#">NETTUTS+</a></li>
+                        <li><a href="#">FreelanceSwitch</a></li>
+                        <li><a href="#">In The Woods</a></li>
+                        <li><a href="#">Netsetter</a></li>
+                        <li><a href="#">PSDTUTS+</a></li>
+                    </ul>
+                </section>
+                <section id="popular" class="col-md-4 col-sm-12">
+                    <header>
+                        <h3>
+                            Popular</h3>
+                    </header>
+                    <ul>
+                        <li><a href="#">This is the title of a blog post</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                        <li><a href="#">Consectetur adipisicing elit, sed do eiusmod</a></li>
+                        <li><a href="#">Duis aute irure dolor</a></li>
+                        <li><a href="#">Excepteur sint occaecat cupidatat</a></li>
+                        <li><a href="#">Reprehenderit in voluptate velit</a></li>
+                        <li><a href="#">Officia deserunt mollit anim id est laborum</a></li>
+                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.4/umd/popper.min.js" integrity="sha512-+Tn2V/oN9O/kiaJg/1o5bETqyS35pMDJzkhkf8uvCzxmRox69AsWkSpBSMEGEe4EZp07Nunw712J3Xvh5Tti0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

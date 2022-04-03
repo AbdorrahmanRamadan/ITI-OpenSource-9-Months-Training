@@ -1,0 +1,138 @@
+
+ /* Chrome, Safari, Edge, Opera */
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+ /* Firefox */
+ input[type=number] {
+     -moz-appearance: textfield;
+ }
+ label{
+ vertical-align: middle;
+ }
+.address .input {
+     display: inline;!important;
+     width: 57%;!important;
+ }
+ .top_left_corner{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 35%;
+ }
+ .bottom_right_corner{
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     width: 25%;
+ }
+ @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+ body {
+     /*background: linear-gradient(to bottom right, #92c5fe 0%, #cbc2fb 100%);*/
+     font-family: "Open Sans", sans-serif;
+     min-height: 90vh;
+ }
+ img {
+     width: 100%;
+     border-bottom-left-radius: 10px;
+     border-top-left-radius: 10px;
+     display: block;
+ }
+ a {
+     margin-left: 30px;
+     color: #3c63cc;
+     font-weight: 600;
+ }
+ a:hover {
+     margin-left: 30px;
+     color: #2fa1fd;
+ }
+ .modernForm {
+     max-width: 1200px;
+     display: flex;
+     position: absolute;
+     top: 15%;
+     left: 17%;
+     background-color: #fff;
+     box-shadow: 0 0 8px rgb(0 0 0 / 16%);
+     border-radius: 20px;
+ }
+ .imageSection {
+     flex-basis: 50%;
+     position: relative;
+     color: white;
+ }
+ .overlay {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: #2fa1fd;
+     opacity:0.2 ;
+     border-bottom-left-radius: 10px;
+     border-top-left-radius: 10px;
+     z-index: 0;
+ }
+ .contactForm {
+     flex-basis: 45%;
+     margin: auto;
+     color: #555;
+     padding-left: 30px;
+ }
+ .contactForm h1 {
+     padding: 15px 0;
+ }
+ .input {
+     width: 90%;
+     padding: 10px;
+     border-radius: 5px;
+     border: rgb(177, 177, 177) 1px solid;
+     margin-top: 10px;
+ }
+ .input:focus {
+     border: 1px solid #2fa1fd;
+     outline: none;
+ }
+ .input-wrapper {
+     position: relative;
+     margin-bottom: 20px;
+ }
+ .actions{
+     text-align: center;
+     margin-bottom: 20px;
+ }
+ .action {
+     background-color: #3c63cc;
+     font-size: 1rem;
+     border: none;
+     color: white;
+     padding: 10px 30px;
+     border-radius: 5px;
+     text-decoration: none;
+     margin: 10px;
+     cursor: pointer;
+ }
+ .action:hover {
+     transform: scale(1.1);
+     box-shadow: 0 5px 25px -15px rgba(0, 0, 0, 0.5);
+ }
+ @media only screen and (max-width: 768px) {
+     .modernForm {
+         flex-wrap: wrap;
+     }
+     .imageSection,
+     .contactForm {
+         flex-basis: 100%;
+     }
+     .overlay,
+     img {
+         border-bottom-left-radius: 0;
+         border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+     }
+     .contactForm {
+         padding-right: 30px;
+     }
+ }
+
