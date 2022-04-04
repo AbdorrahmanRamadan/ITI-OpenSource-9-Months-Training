@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .curve{
+            position: relative;
+        }
+        .curve::after{
+            background: #f8f9fa;
+            position: absolute;
+            content: "";
+            left:0;
+            right:0;
+            bottom: -5px;
+            height: 45px;
+            border-radius: 50% 50% 0 0;
+        }
+        .arrow-up {
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #6c757d;
+            margin: 4px auto -16px auto;
+        }
+    </style>
+    <title>Responsive</title>
+</head>
+<body class="bg-light">
+
+    <div class="container-md">
+        <div class="row">
+            <div class="side-images col-sm-12 col-lg-2">
+                <div class="d-none d-md-block col-md-3 col-lg-12">
+                    <div class="curve bg-secondary w-100 p-5 rounded-bottom"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3 col-lg-12 mt-2 mb-2">
+                        <img src="1.jpg" alt="image" class="w-100 h-100  rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-12 mb-2">
+                        <img src="2.jpg" alt="image" class="w-100 h-100 rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-12 mb-2">
+                        <img src="3.jpg" alt="image" class="w-100 h-100 rounded-circle">
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-12 mb-2">
+                        <img src="4.jpg" alt="image" class="w-100 h-100 rounded-circle">
+                    </div>
+                </div>
+            </div>
+            <div class="right-content col-sm-12 col-lg-10 p-5">
+                <div class="col-12"> 
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-4 mb-3 overflow-hidden">
+                            <img src="5.jpg" alt="image" class="w-100">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3 overflow-hidden">
+                            <img src="6.jpg" alt="image" class="w-100">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3 overflow-hidden">
+                            <img src="7.jpg" alt="image" class="w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-4 p-2">
+                    <div class="row">
+                        <div class="card col-12 col-md-4 mb-3 bg-light border-0">
+                            <div class="text-center">
+                                <i class="bi bi-award-fill fs-1 text-secondary"></i>
+                                <p class="h5">Header</p>
+                            </div>
+                            <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-md-4 mb-3 bg-light border-0">
+                            <div class="text-center">
+                                <i class="bi bi-award-fill fs-1 text-secondary"></i>
+                                <p class="h5">Header</p>
+                            </div>
+                            <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-md-4 mb-3 bg-light border-0">
+                            <div class="text-center">
+                                <i class="bi bi-award-fill fs-1 text-secondary"></i>
+                                <p class="h5">Header</p>
+                            </div>
+                            <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-up"></div>
+                <hr>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-md-2">
+                            <p class="fs-2">Alexandria</p>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aut illo quia eligendi? Amet quod quis necessitatibus magni asperiores, nobis ipsa itaque quidem recusandae rem, explicabo rerum natus hic deleniti?</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-8">
+                            <img src="8.jpg" alt="image" class="w-100">
+                        </div>
+                        <div class="col-12 col-md-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste saepe labore, laboriosam ipsum ipsa accusantium ullam, quidem itaque, facere minus? Nulla asperiores impedit dicta doloribus iste voluptates porro consectetur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste saepe labore, laboriosam ipsum ipsa accusantium ullam, quidem itaque, facere minus? Nulla asperiores impedit dicta doloribus iste voluptates porro consectetur</div>
+                    </div>
+                    
+                    <div class="row mt-3">
+                        <div class="col-12 col-md-4 mb-3 overflow-hidden">
+                            <img src="9.jpg" alt="image" class="w-100">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3 overflow-hidden">
+                            <img src="10.jpg" alt="image" class="w-100">
+                        </div>
+                        <div class="col-12 col-md-4 mb-3 overflow-hidden">
+                            <img src="11.jpg" alt="image" class="w-100">
+                        </div>
+                    </div>
+            
+            </div>
+            
+            </div>
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
