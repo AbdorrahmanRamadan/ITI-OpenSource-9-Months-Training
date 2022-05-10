@@ -1,0 +1,42 @@
+<div id="contenttext">
+<form>
+  <div class="row mb-5">
+    <div class="col">
+      <input type="number" class="form-control"  placeholder="ID" (change)="setID(inputID.value)" #inputID>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Name" [value]="student.Name" #inputName>
+    </div>
+    <div class="col">
+      <input type="number" class="form-control"  placeholder="Age" (change)="setAge(inputAge.value)" #inputAge>
+    </div>
+    <div class="col">
+      <input type="number" class="form-control"  placeholder="Department_Number" (change)="setAge(Department_Number.value)" #Department_Number>
+    </div>
+    <h4 class="red-color"*ngIf="student.Age<18">you must exceed 18 years</h4>
+  </div>
+  <button type="button" class="btn btn-primary offset-4 col-5 mb-4" (click)="add(inputID.value,inputName.value,inputAge.value,Department_Number.value)">Add Student</button>
+  <p class="offset-1 text-danger font-weight-bold" >Student Count : {{getSudentCount()}}</p>
+</form>
+<table class="table">
+  <thead>
+  <td>#</td>
+  <td>Name</td>
+  <td>Age</td>
+  <td>Dept_Number</td>
+  <td>Actions</td>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of students; let currentIndex=index">
+    <td>{{item.ID}}</td>
+    <td>{{item.Name}}</td>
+    <td>{{item.Age}}</td>
+    <td>{{item.Dept_Number}}</td>
+    <td>
+      <button type="button" (click)="delete(currentIndex)" class="btn btn-danger">Delete</button>
+      <button type="button" (click)="edit(inputID.value,inputName.value,inputAge.value,Department_Number.value,currentIndex)" class="btn btn-primary">Edit</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
