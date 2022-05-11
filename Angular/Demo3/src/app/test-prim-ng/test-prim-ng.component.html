@@ -1,0 +1,14 @@
+<h1 class="mt-5">Prime-ng Test</h1>
+<div class="row">
+    <div class="col-2"><p-calendar [(ngModel)]="date"></p-calendar></div>
+    <!-- <p-calendar [(ngModel)]="date" [inline]="true"></p-calendar> -->
+    <div class="col-2"><p-knob [(ngModel)]="knob"></p-knob></div>
+    <div class="col-1"><p-inputSwitch [(ngModel)]="switch"></p-inputSwitch></div>
+    <div class="col-2">
+        <label for="slide">Input</label>
+        <input name="slide" class="my-1" type="text" [(ngModel)]="slider">
+        <p-slider [(ngModel)]="slider"></p-slider>
+    </div>
+    
+</div>
+<div><p-triStateCheckbox [(ngModel)]="value" label="Item Label"></p-triStateCheckbox></div>
