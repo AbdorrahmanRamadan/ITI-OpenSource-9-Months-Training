@@ -1,0 +1,10 @@
+<h3 class="mb-5">Insert Student from Here</h3>
+<label for="id">ID:</label>
+<input type="text" id="id" class="mx-2" [(ngModel)]="newStudent.id">
+<label for="name">Name:</label>
+<input type="text" id="name" class="mx-2" [(ngModel)]="newStudent.name">
+<label for="age">Age:</label>
+<input type="text" id="age" class="mx-2" [(ngModel)]="newStudent.age">
+<label for="deptNo">Department Number:</label>
+<input type="text" id="deptNo" class="mx-2" [(ngModel)]="newStudent.deptno">
+<button class="btn-primary mx-2" (click)="insert()">Insert Student</button>

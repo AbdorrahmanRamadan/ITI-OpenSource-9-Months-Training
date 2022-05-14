@@ -1,0 +1,16 @@
+<table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
+    <thead class="thead-inverse|thead-default">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of depts">
+                <td scope="row">{{item.id}}</td>
+                <td>{{item.deptName}}</td>
+                <td>{{item.location}}</td>
+            </tr>
+        </tbody>
+</table>
