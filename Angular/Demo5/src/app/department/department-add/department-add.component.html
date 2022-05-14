@@ -1,0 +1,8 @@
+<h3 class="mb-5 mt-5">Insert Department from Here</h3>
+<label for="id">Department ID:</label>
+<input type="text" id="id" class="mx-2" [(ngModel)]="newDept.id">
+<label for="deptName">Department Name:</label>
+<input type="text" id="deptName" class="mx-2" [(ngModel)]="newDept.deptName">
+<label for="location">Department Location:</label>
+<input type="text" id="location" class="mx-2" [(ngModel)]="newDept.location">
+<button class="btn-primary mx-2" (click)="insert()">Insert Department</button>
