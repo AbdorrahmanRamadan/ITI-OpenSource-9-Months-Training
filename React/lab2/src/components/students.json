@@ -1,0 +1,20 @@
+{
+    "students":[
+        {
+            "name":"Abdorrahman",
+            "age":24
+        },
+        {
+            "name":"Mohammad",
+            "age":25
+        },
+        {
+            "name":"Ahmad",
+            "age":26
+        },
+        {
+            "name":"Ramadan",
+            "age":27
+        }
+    ]
+}
