@@ -1,0 +1,22 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+    <div class="card mt-4">
+        <div class="card-header bg-primary text-white">
+            Task Details
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <label class="col-4">Name: </label>
+                <span class="col-8">{{ task_details.name }}</span>
+            </div>
+            <div class="row">
+                <label class="col-4">Priority: </label>
+                <span class="col-8">{{ task_details.priority }}</span>
+            </div>
+            <div class="row">
+                <label class="col-4">Status: </label>
+                <span class="col-8">{{ task_details.is_done }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

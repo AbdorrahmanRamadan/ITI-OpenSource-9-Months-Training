@@ -1,0 +1,24 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+    <form name="edit" action="{% url 'todo:new_task_added' %}"
+          method="POST">{% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputID" class="form-label">Task ID</label>
+            <input type="text" name="task_id" class="form-control" id="exampleInputID" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Task Name</label>
+            <input type="text" name="task_name" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPrio" class="form-label">Task Priority</label>
+            <input type="number" name="task_prior" class="form-control" id="exampleInputPrio">
+        </div>
+        <select class="form-select mb-3" aria-label="Default select example" name="task_status">
+            <option selected>Open this select menu</option>
+            <option value="True">Done</option>
+            <option value="False">Pending</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+{% endblock %}

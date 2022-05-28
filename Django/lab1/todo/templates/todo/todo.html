@@ -1,0 +1,40 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+    <div class="row mt-3">
+        <h5 class="col-11">All Tasks</h5>
+        <a class="btn btn-primary col-1" href="{% url 'todo:new_task' %}">Add</a>
+    </div>
+    <table class="table mt-4">
+        <thead class="table-light">
+        <tr>
+            <th>Name</th>
+            <th>Priority</th>
+            <th>Is Done</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for task,values in todo_list.items %}
+            <tr>
+                <td>{{ values.name }}</td>
+                <td>{{ values.priority }}</td>
+                {% if values.is_done %}
+                    <td class="text-success">done</td>
+                {% else %}
+                    <td class="text-warning">pending</td>
+                {% endif %}
+                <td>
+                    <a class="btn btn-warning" href="{% url 'todo:task_details' task %}">View</a>
+                    <a class="btn btn-primary" href="{% url 'todo:edit_task' task %}">Edit</a>
+                    {% if values.is_done %}
+                        <a class="btn btn-success disabled" href="#">Done</a>
+                    {% else %}
+                        <a class="btn btn-success" href="{% url 'todo:task_status' task %}">Done</a>
+                    {% endif %}
+                    <a class="btn btn-danger" href="{% url 'todo:task_deleted' task %}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

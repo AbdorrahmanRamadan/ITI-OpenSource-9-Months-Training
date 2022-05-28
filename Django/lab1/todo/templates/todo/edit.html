@@ -1,0 +1,26 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+    <form name="edit" action="{% url 'todo:task_updated' %}"
+          method="POST">{% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleInputID" class="form-label">Task ID</label>
+            <input type="text" name="task_id" class="form-control" id="exampleInputID" aria-describedby="emailHelp"
+                   value={{ task_id }}>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Task Name</label>
+            <input type="text" name="task_name" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+                   value={{ task_details.name }}>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPrio" class="form-label">Task Priority</label>
+            <input type="number" name="task_prior" class="form-control" id="exampleInputPrio"
+                   value={{ task_details.priority }}>
+        </div>
+        <select class="form-select mb-3" aria-label="Default select example" name="task_status">
+            <option value=True {% if task_details.is_done == True %}selected="selected"{% endif %}>Done</option>
+            <option value=False {% if task_details.is_done == False %}selected="selected"{% endif %}>Pending</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+{% endblock %}
