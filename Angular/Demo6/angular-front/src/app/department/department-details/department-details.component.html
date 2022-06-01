@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">department NO .{{deptToShow?._id}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Name : {{deptToShow?.name}}</h6>
+      <p class="card-text">Loocation : {{deptToShow?.location}}</p>
+     <button
+        type="button"
+        (click)="goHome()"
+        class="btn btn-sm btn-primary"
+      >
+        Back
+      </button>
+    </div>
+  </div>
+</div>
