@@ -1,0 +1,81 @@
+{
+  "students": [
+    {
+      "first_name": "Nellie",
+      "last_name": "Evesque",
+      "email": "nevesque0@printfriendly.com",
+      "gender": "Female",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "first_name": "Schuyler",
+      "last_name": "De Luna",
+      "email": "sdeluna1@tinyurl.com",
+      "gender": "Male"
+    },
+    {
+      "id": 3,
+      "first_name": "Britte",
+      "last_name": "Wallace",
+      "email": "bwallace2@cdc.gov",
+      "gender": "Female"
+    },
+    {
+      "id": 4,
+      "first_name": "Tildy",
+      "last_name": "Pragnall",
+      "email": "tpragnall3@engadget.com",
+      "gender": "Female"
+    },
+    {
+      "id": 5,
+      "first_name": "Conant",
+      "last_name": "Downe",
+      "email": "cdowne4@issuu.com",
+      "gender": "Male"
+    },
+    {
+      "id": 6,
+      "first_name": "Karlan",
+      "last_name": "Atwel",
+      "email": "katwel5@opensource.org",
+      "gender": "Male"
+    },
+    {
+      "id": 7,
+      "first_name": "Berti",
+      "last_name": "Hilary",
+      "email": "bhilary6@moonfruit.com",
+      "gender": "Male"
+    },
+    {
+      "id": 8,
+      "first_name": "Abe",
+      "last_name": "Rosebotham",
+      "email": "arosebotham7@twitpic.com",
+      "gender": "Male"
+    },
+    {
+      "id": 9,
+      "first_name": "Lilia",
+      "last_name": "Ibbitt",
+      "email": "libbitt8@techcrunch.com",
+      "gender": "Female"
+    },
+    {
+      "id": 10,
+      "first_name": "Melisande",
+      "last_name": "Nevitt",
+      "email": "mnevitt9@cornell.edu",
+      "gender": "Female"
+    },
+    {
+      "first_name": "Abdorrahman",
+      "last_name": "Ramadan",
+      "email": "AbdorrahmanRamadan@gmail.com",
+      "gender": "male",
+      "id": 11
+    }
+  ]
+}
