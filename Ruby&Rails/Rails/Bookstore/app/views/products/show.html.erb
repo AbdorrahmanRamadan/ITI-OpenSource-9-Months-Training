@@ -1,0 +1,17 @@
+<div class="pg-light mt4 offset-4 mt-5">
+  <div class="card" style="width: 18rem;">
+  <%= image_tag(@product.image,class:'card-img-top img-thumbnail ') %>
+    <div class="card-body">
+      <h5 class="card-title"><%= @product.name %></h5>
+      <p class="card-text"><%=  @product.description  %></p>
+      <p class="card-text mb-1">posted <%= distance_of_time_in_words( Time.now,@product.created_at, include_seconds: true) %> ago</p>
+      <p class="card-text mb-1">updated <%= distance_of_time_in_words( Time.now,@product.updated_at, include_seconds: true) %> ago</p>
+    <small class="fs-6"> written By :</small> <small class="text-muted fst-italic"><%= @product.user.name %></small></p>
+
+
+      <a class="btn  btn-primary"
+      <%= link_to "Go Back" , products_path %>
+        </a>
+    </div>
+  </div>
+</div>
